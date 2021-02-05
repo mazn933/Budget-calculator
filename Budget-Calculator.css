@@ -1,0 +1,296 @@
+body{padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+
+}
+
+img{width: 100px;
+    height: 45px;}
+
+
+.container{width:100%;
+          height:100vh;
+          display: grid;
+          grid-template-columns:1fr 1fr;
+          grid-template-rows: 12vh 1fr 1fr 55vh 1fr;
+}
+
+.title{margin: 0px;
+ grid-row:1/2;
+ grid-column:1/3;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ background-color:#3e4a61;
+ color: white;
+ border-bottom:2px solid black;
+ }
+
+ h1{font-weight: 500;}
+
+#incomes{
+   font-size:1.5rem;
+   color: rgb(32, 102, 32);
+   border-bottom: 3px solid #3e3636;
+}
+
+#expenses{
+   font-size:1.5rem;
+   color: #f07b3f;
+   border-bottom: 3px solid #3e3636;
+
+}
+
+
+.income{grid-row:2/3;
+       grid-column:1/2;
+       justify-self: center;
+
+      }
+
+.expense{grid-row:2/3;
+        grid-column:2/3;
+        justify-self: center;
+        }
+
+
+
+.ShowSummary{grid-row: 3/4;
+    grid-column:1/3;
+    align-self:center;
+    justify-self:center;
+    cursor: pointer;
+    background: #40514e;
+   -webkit-border-radius: 5;
+   -moz-border-radius: 5;
+    border-radius: 5px;
+   color: #ffffff;
+   font-size: 15px;
+   padding: 8px 16px 8px 20px;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0px 3px 4px -2px rgba(20, 20, 20, 0.92);
+   font-weight: 500;
+   margin-top: 1em;
+       }
+
+.ShowSummary:hover{border: 1px solid black;}
+
+.TotalGross{grid-row:4/5;
+       grid-column:1/3;
+       justify-self: center;
+       align-self: center;
+       background-color:#d8dbdb;
+       width: 300px;
+       margin-top: 1em;
+       box-shadow: 0px 0px 1px 1px rgba(29, 28, 28, 0.94);;
+       border:1px solid rgb(136, 136, 136);
+       display: none;
+       height: 40vh; 
+       margin-bottom: 4em;
+}
+
+.footer{grid-row: 5/6;
+grid-column: 1/3;
+height: 1vh;}
+
+.TotalGross h3{font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+      margin: 0px;}
+
+.showTotalgross{display: block;}
+
+#summary{text-align: center;
+   font-weight: 400;
+   border-bottom:2px solid #00a79d;}
+
+
+.AddedExpense,.AddedIncome,.nm{background-color:#d9dad7;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  width: 500px;
+  padding: 0em 0em 1em 1em;
+  height: 6vh;
+  border-bottom: 2px solid rgb(51, 49, 49);}
+
+.AddedIncome{display:none}
+.AddedExpense{display: none;}
+.showAddedIncome{display:flex;}
+
+
+.inputmn,input{width:100px;
+    height:30px;
+    border:1px solid rgb(196, 192, 192);
+    border-radius:5px;
+    text-align: left;
+    margin-top: 1em;
+    outline: none;
+    }
+
+input:focus{
+border: 2px solid #107a8b
+}
+
+
+
+
+
+.Buttonclose, span{cursor: pointer;
+    background-color: #9c3131;
+    margin: 0px;
+    padding:.2em .7em ;
+    font-size:.7rem;
+    height: 8vh;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+.delete{display: none;
+      }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.buttons{
+display: flex;
+justify-content: space-around;
+margin-top: 2em;
+}
+
+.plusExp,.plusInc{cursor: pointer;
+     margin:0px;
+     height: 100%;
+     color: white;
+     padding:0.1em .2em;
+     margin-left: 1em;
+     background-color:white;
+     color: black;
+     border-radius: 5%;
+     font-size: 1rem;}
+
+.calculateExpense,.calculateIncome{
+cursor: pointer;
+background: #000000;
+-webkit-border-radius: 5;
+-moz-border-radius: 5;
+border-radius: 5px;
+color: #ffffff;
+font-size: 21px;
+padding: 8px 16px 8px 20px;
+text-decoration: none;
+border: none;
+box-shadow: 0px 3px 4px -2px rgba(20, 20, 20, 0.92);
+font-weight: 500;
+}
+
+
+
+.AddnewExpense,.addNewIncome{
+cursor: pointer;
+padding: 0.25em 0.5em;
+text-decoration: none;
+color: #FFF;
+background: #0d8f30;/*button color*/
+border-bottom: solid 2px #d27d00;/*daker color*/
+border-radius: 4px;
+box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+border: none;
+display: flex;
+align-items: baseline;
+font-size: 1rem;
+font-weight: 500;
+}
+
+.calculateIncome:hover {
+background: #14171d;
+}
+
+.calculateExpense:hover {
+background: #14171d;
+}
+
+.addNewIncome:hover{
+background-color: #0ca341;
+}
+
+.AddnewExpense:hover{
+background-color: #0ca341;
+}
+
+.totalExpense,.totalIncome{font-size: 1.2rem;
+    font-weight: 400;
+    background-color: #dee1ec;
+    margin-top: 1em;
+    text-align: center;
+    border-bottom: 2px solid #107a8b;
+    border-radius: 3px
+    }
+
+.hidetotals{display: none;}
+
+.showtotal{display:block}
+
+
+
+
+
+
+
+
+@media(max-width:1150px){
+.container{width:100%;
+          height:100vh;
+          display: grid;
+          grid-template-columns:1fr 1fr 1fr;
+          grid-template-rows: 12vh 1fr 1fr 50vh 1fr;
+}
+   .title{grid-row:1/2;grid-column:1/4;}
+   .income{grid-row: 2/3;grid-column:2/3;}
+   .expense{grid-column:2/3;
+            grid-row: 3/4;}
+   
+   .ShowSummary{grid-row: 4/5;
+    grid-column:2/3;}
+
+   .TotalGross{grid-row:4/5;grid-column:2/3;}
+}
+
+@media(max-width:525px){
+.income,.expense{margin-right: 2em;;}
+
+  #incomes,#expenses{width: 130%;}
+
+.AddedIncome,.AddedExpense,.nm{width: 120%;}
+    input{width:40px}
+
+   .buttons{flex-direction: column;}
+
+   .AddnewExpense,.addNewIncome{margin-top: 1em;width: 120%;}
+   .totalExpense,.totalIncome{width: 120%;}
+   .calculateExpense,.calculateIncome{width: 120%
+    ;}
+
+    .ShowSummary{margin-bottom: 3em;}
+
+    .title{font-size: .8rem;}
+          
+
+   
+}
+
+
